@@ -663,4 +663,176 @@ BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
        (v)ersion (k)ill (D)b-tables (d)istribution
 a
 
+fujikawigonoMBP:aedmap e_fujikawa$ mix recompile
+Compiling 1 file (.ex)
+Generated aedmap app
+** (Mix) The task "recompile" could not be found. Did you mean "compile"?
+fujikawigonoMBP:aedmap e_fujikawa$ recompile
+-bash: recompile: command not found
+fujikawigonoMBP:aedmap e_fujikawa$ iex -S mix phx.server
+Erlang/OTP 21 [erts-10.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
+
+[info] Running AedmapWeb.Endpoint with cowboy 2.6.1 at http://localhost:4000
+Interactive Elixir (1.8.1) - press Ctrl+C to exit (type h() ENTER for help)
+iex 1> recmo
+Webpack is watching the files…
+
+Hash: 9410b407d6e5112db4e4
+Version: webpack 4.4.0
+Time: 548ms
+Built at: 2019-2-17 06:12:32
+                Asset       Size       Chunks             Chunk Names
+       ../css/app.css   10.6 KiB  ./js/app.js  [emitted]  ./js/app.js
+               app.js   7.23 KiB  ./js/app.js  [emitted]  ./js/app.js
+       ../favicon.ico   1.23 KiB               [emitted]
+        ../robots.txt  202 bytes               [emitted]
+../images/phoenix.png   13.6 KiB               [emitted]
+[../deps/phoenix_html/priv/static/phoenix_html.js] 2.17 KiB {./js/app.js} [built]
+[./css/app.css] 39 bytes {./js/app.js} [built]
+[./js/app.js] 493 bytes {./js/app.js} [built]
+   [0] multi ./js/app.js 28 bytes {./js/app.js} [built]
+    + 2 hidden modules
+Child mini-css-extract-plugin node_modules/css-loader/index.js!css/app.css:
+    [./node_modules/css-loader/index.js!./css/app.css] ./node_modules/css-loader!./css/app.css 288 bytes {mini-css-extract-plugin} [built]
+    [./node_modules/css-loader/index.js!./css/phoenix.css] ./node_modules/css-loader!./css/phoenix.css 10.9 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+
+** (CompileError) iex:1: undefined function re/0
+
+iex 1>
+nil
+iex 2> recompile
+:noop
+iex 3> [info] Replied phoenix:live_reload :ok
+data = Db.query("SELECT * FROM locations")
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution
+a
+fujikawigonoMBP:aedmap e_fujikawa$ iex -S mix phx.server
+Erlang/OTP 21 [erts-10.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
+
+[info] Running AedmapWeb.Endpoint with cowboy 2.6.1 at http://localhost:4000
+Interactive Elixir (1.8.1) - press Ctrl+C to exit (type h() ENTER for help)
+iex 1> data = Db.query("SELECT * FROM locations")
+Webpack is watching the files…
+
+
+[debug] QUERY OK db=6.8ms decode=2.1ms queue=1.0ms
+SELECT * FROM locations []
+%Postgrex.Result{
+  columns: ["id", "latitude", "longitude", "locationName", "inserted_at",
+   "updated_at"],
+  command: :select,
+  connection_id: 84304,
+  messages: [],
+  num_rows: 2,
+  rows: [
+    [1, 35.609226, 139.730186, "品川図書館",
+     ~N[2019-02-16 21:06:31.000000], ~N[2019-02-16 21:06:31.000000]],
+    [2, 35.588476, 139.737501, "しながわ水族館",
+     ~N[2019-02-16 21:07:36.000000], ~N[2019-02-16 21:07:36.000000]]
+  ]
+}
+iex 2> Hash: 9410b407d6e5112db4e4
+Version: webpack 4.4.0
+Time: 569ms
+Built at: 2019-2-17 06:12:53
+                Asset       Size       Chunks             Chunk Names
+       ../css/app.css   10.6 KiB  ./js/app.js  [emitted]  ./js/app.js
+               app.js   7.23 KiB  ./js/app.js  [emitted]  ./js/app.js
+       ../favicon.ico   1.23 KiB               [emitted]
+../images/phoenix.png   13.6 KiB               [emitted]
+        ../robots.txt  202 bytes               [emitted]
+[../deps/phoenix_html/priv/static/phoenix_html.js] 2.17 KiB {./js/app.js} [built]
+[./css/app.css] 39 bytes {./js/app.js} [built]
+[./js/app.js] 493 bytes {./js/app.js} [built]
+   [0] multi ./js/app.js 28 bytes {./js/app.js} [built]
+    + 2 hidden modules
+Child mini-css-extract-plugin node_modules/css-loader/index.js!css/app.css:
+    [./node_modules/css-loader/index.js!./css/app.css] ./node_modules/css-loader!./css/app.css 288 bytes {mini-css-extract-plugin} [built]
+    [./node_modules/css-loader/index.js!./css/phoenix.css] ./node_modules/css-loader!./css/phoenix.css 10.9 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+[info] Replied phoenix:live_reload :ok
+[info] Replied phoenix:live_reload :ok
+fujikawigonoMBP:aedmap e_fujikawa$ iex -S mix phx.server
+Erlang/OTP 21 [erts-10.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
+
+[info] Running AedmapWeb.Endpoint with cowboy 2.6.1 at http://localhost:4000
+Interactive Elixir (1.8.1) - press Ctrl+C to exit (type h() ENTER for help)
+iex 1>
+Webpack is watching the files…
+
+Hash: 9410b407d6e5112db4e4
+Version: webpack 4.4.0
+Time: 563ms
+Built at: 2019-2-17 06:13:39
+                Asset       Size       Chunks             Chunk Names
+       ../css/app.css   10.6 KiB  ./js/app.js  [emitted]  ./js/app.js
+               app.js   7.23 KiB  ./js/app.js  [emitted]  ./js/app.js
+       ../favicon.ico   1.23 KiB               [emitted]
+../images/phoenix.png   13.6 KiB               [emitted]
+        ../robots.txt  202 bytes               [emitted]
+[../deps/phoenix_html/priv/static/phoenix_html.js] 2.17 KiB {./js/app.js} [built]
+[./css/app.css] 39 bytes {./js/app.js} [built]
+[./js/app.js] 493 bytes {./js/app.js} [built]
+   [0] multi ./js/app.js 28 bytes {./js/app.js} [built]
+    + 2 hidden modules
+Child mini-css-extract-plugin node_modules/css-loader/index.js!css/app.css:
+    [./node_modules/css-loader/index.js!./css/app.css] ./node_modules/css-loader!./css/app.css 288 bytes {mini-css-extract-plugin} [built]
+    [./node_modules/css-loader/index.js!./css/phoenix.css] ./node_modules/css-loader!./css/phoenix.css 10.9 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+
+nil
+iex 2>
+nil
+iex 3>
+nil
+iex 4> data = Db.query("SELECT * FROM locations")
+[debug] QUERY OK db=7.4ms decode=1.3ms queue=1.0ms
+SELECT * FROM locations []
+%Postgrex.Result{
+  columns: ["id", "latitude", "longitude", "locationName", "inserted_at",
+   "updated_at"],
+  command: :select,
+  connection_id: 84542,
+  messages: [],
+  num_rows: 2,
+  rows: [
+    [1, 35.609226, 139.730186, "品川図書館",
+     ~N[2019-02-16 21:06:31.000000], ~N[2019-02-16 21:06:31.000000]],
+    [2, 35.588476, 139.737501, "しながわ水族館",
+     ~N[2019-02-16 21:07:36.000000], ~N[2019-02-16 21:07:36.000000]]
+  ]
+}
+iex 5> data.columns[info] Replied phoenix:live_reload :ok
+[info] Replied phoenix:live_reload :ok
+
+["id", "latitude", "longitude", "locationName", "inserted_at", "updated_at"]
+iex 6> data.rows
+[
+  [1, 35.609226, 139.730186, "品川図書館", ~N[2019-02-16 21:06:31.000000],
+   ~N[2019-02-16 21:06:31.000000]],
+  [2, 35.588476, 139.737501, "しながわ水族館",
+   ~N[2019-02-16 21:07:36.000000], ~N[2019-02-16 21:07:36.000000]]
+]
+iex 7>  [head | tail ] = data.rows
+[
+  [1, 35.609226, 139.730186, "品川図書館", ~N[2019-02-16 21:06:31.000000],
+   ~N[2019-02-16 21:06:31.000000]],
+  [2, 35.588476, 139.737501, "しながわ水族館",
+   ~N[2019-02-16 21:07:36.000000], ~N[2019-02-16 21:07:36.000000]]
+]
+iex 8> List.zip([data.columns, head])
+[
+  {"id", 1},
+  {"latitude", 35.609226},
+  {"longitude", 139.730186},
+  {"locationName", "品川図書館"},
+  {"inserted_at", ~N[2019-02-16 21:06:31.000000]},
+  {"updated_at", ~N[2019-02-16 21:06:31.000000]}
+]
+iex 9>
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution
+a
 ``` 
