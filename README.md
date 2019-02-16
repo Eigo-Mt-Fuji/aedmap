@@ -425,4 +425,40 @@ BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
 a
 fujikawigonoMBP:aedmap e_fujikawa$
 
+fujikawigonoMBP:aedmap e_fujikawa$ nano lib/aedmap_web/templates/layout/app.html.eex
+fujikawigonoMBP:aedmap e_fujikawa$ mix phx.server
+Compiling 1 file (.ex)
+[info] Running AedmapWeb.Endpoint with cowboy 2.6.1 at http://localhost:4000
+
+Webpack is watching the files…
+
+Hash: 9410b407d6e5112db4e4
+Version: webpack 4.4.0
+Time: 601ms
+Built at: 2019-2-17 05:50:08
+                Asset       Size       Chunks             Chunk Names
+       ../css/app.css   10.6 KiB  ./js/app.js  [emitted]  ./js/app.js
+               app.js   7.23 KiB  ./js/app.js  [emitted]  ./js/app.js
+       ../favicon.ico   1.23 KiB               [emitted]
+../images/phoenix.png   13.6 KiB               [emitted]
+        ../robots.txt  202 bytes               [emitted]
+[../deps/phoenix_html/priv/static/phoenix_html.js] 2.17 KiB {./js/app.js} [built]
+[./css/app.css] 39 bytes {./js/app.js} [built]
+[./js/app.js] 493 bytes {./js/app.js} [built]
+   [0] multi ./js/app.js 28 bytes {./js/app.js} [built]
+    + 2 hidden modules
+Child mini-css-extract-plugin node_modules/css-loader/index.js!css/app.css:
+    [./node_modules/css-loader/index.js!./css/app.css] ./node_modules/css-loader!./css/app.css 288 bytes {mini-css-extract-plugin} [built]
+    [./node_modules/css-loader/index.js!./css/phoenix.css] ./node_modules/css-loader!./css/phoenix.css 10.9 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+[info] GET /
+[debug] Processing with AedmapWeb.PageController.index/2
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 2828ms
+[info] Replied phoenix:live_reload :ok
+^C
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution
+a
 ``` 
