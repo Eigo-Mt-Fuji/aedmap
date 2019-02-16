@@ -17,6 +17,7 @@ defmodule AedmapWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/locations", LocationController
   end
 
   # Other scopes may use custom stacks.

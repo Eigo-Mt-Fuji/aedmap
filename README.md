@@ -537,4 +537,76 @@ BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
        (v)ersion (k)ill (D)b-tables (d)istribution
 a
 
+fujikawigonoMBP:aedmap e_fujikawa$ mix phx.gen.html AED Location locations latitude:float longitude:float locationName:string
+* creating lib/aedmap_web/controllers/location_controller.ex
+* creating lib/aedmap_web/templates/location/edit.html.eex
+* creating lib/aedmap_web/templates/location/form.html.eex
+* creating lib/aedmap_web/templates/location/index.html.eex
+* creating lib/aedmap_web/templates/location/new.html.eex
+* creating lib/aedmap_web/templates/location/show.html.eex
+* creating lib/aedmap_web/views/location_view.ex
+* creating test/aedmap_web/controllers/location_controller_test.exs
+* creating lib/aedmap/aed/location.ex
+* creating priv/repo/migrations/20190216210248_create_locations.exs
+* creating lib/aedmap/aed.ex
+* injecting lib/aedmap/aed.ex
+* creating test/aedmap/aed/aed_test.exs
+* injecting test/aedmap/aed/aed_test.exs
+
+Add the resource to your browser scope in lib/aedmap_web/router.ex:
+
+    resources "/locations", LocationController
+
+
+Remember to update your repository by running migrations:
+
+    $ mix ecto.migrate
+
+fujikawigonoMBP:aedmap e_fujikawa$ nano lib/aedmap_web/router.ex
+fujikawigonoMBP:aedmap e_fujikawa$ mix ecto.migrate
+Compiling 6 files (.ex)
+Generated aedmap app
+[info] == Running 20190216210248 Aedmap.Repo.Migrations.CreateLocations.change/0 forward
+[info] create table locations
+[info] == Migrated 20190216210248 in 0.0s
+fujikawigonoMBP:aedmap e_fujikawa$ iex -S mix phx.server
+Erlang/OTP 21 [erts-10.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
+
+[info] Running AedmapWeb.Endpoint with cowboy 2.6.1 at http://localhost:4000
+Interactive Elixir (1.8.1) - press Ctrl+C to exit (type h() ENTER for help)
+iex 1>
+Webpack is watching the files…
+
+Hash: 9410b407d6e5112db4e4
+Version: webpack 4.4.0
+Time: 623ms
+Built at: 2019-2-17 06:03:43
+                Asset       Size       Chunks             Chunk Names
+       ../css/app.css   10.6 KiB  ./js/app.js  [emitted]  ./js/app.js
+               app.js   7.23 KiB  ./js/app.js  [emitted]  ./js/app.js
+       ../favicon.ico   1.23 KiB               [emitted]
+../images/phoenix.png   13.6 KiB               [emitted]
+        ../robots.txt  202 bytes               [emitted]
+[../deps/phoenix_html/priv/static/phoenix_html.js] 2.17 KiB {./js/app.js} [built]
+[./css/app.css] 39 bytes {./js/app.js} [built]
+[./js/app.js] 493 bytes {./js/app.js} [built]
+   [0] multi ./js/app.js 28 bytes {./js/app.js} [built]
+    + 2 hidden modules
+Child mini-css-extract-plugin node_modules/css-loader/index.js!css/app.css:
+    [./node_modules/css-loader/index.js!./css/app.css] ./node_modules/css-loader!./css/app.css 288 bytes {mini-css-extract-plugin} [built]
+    [./node_modules/css-loader/index.js!./css/phoenix.css] ./node_modules/css-loader!./css/phoenix.css 10.9 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+[info] GET /locations
+[debug] Processing with AedmapWeb.LocationController.index/2
+  Parameters: %{}
+  Pipelines: [:browser]
+[debug] QUERY OK source="locations" db=0.7ms decode=2.2ms queue=1.0ms
+SELECT l0."id", l0."latitude", l0."locationName", l0."longitude", l0."inserted_at", l0."updated_at" FROM "locations" AS l0 []
+[info] Sent 200 in 64ms
+[info] Replied phoenix:live_reload :ok
+[info] Replied phoenix:live_reload :ok
+
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution
+a
 ``` 
