@@ -1,5 +1,19 @@
 # Aedmap
 
+## About
+
+* This repository is forked from [Eigo-Mt-Fuji/aedmap](https://github.com/Eigo-Mt-Fuji/aedmap)
+* Workround for an error occured while executing mix phx.server with smallex.
+    - tzdata used in smallex causes errror while launching phoenix server.
+
+* Changes are follows
+    - Remove
+       - smallex package
+    - Add
+       - httpoison package
+       - lib/util/exjson.ex
+       - update lib/aedmap_web/templates/location/index.html.eex Json.get -> Aedmap.ExJson.get
+
 ## Gallary
 
 * ![screenshot-1.png](./docs/screenshot-1.png)
