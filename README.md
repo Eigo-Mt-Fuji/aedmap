@@ -609,4 +609,58 @@ SELECT l0."id", l0."latitude", l0."locationName", l0."longitude", l0."inserted_a
 BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
        (v)ersion (k)ill (D)b-tables (d)istribution
 a
+fujikawigonoMBP:aedmap e_fujikawa$ iex -S mix phx.server
+Erlang/OTP 21 [erts-10.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
+
+[info] Running AedmapWeb.Endpoint with cowboy 2.6.1 at http://localhost:4000
+Interactive Elixir (1.8.1) - press Ctrl+C to exit (type h() ENTER for help)
+iex 1>
+nil
+iex 2>
+nil
+iex 3>
+Webpack is watching the files…
+
+Ecto.Adapters.SQL.queryHash: 9410b407d6e5112db4e4ROM locations", [])
+Version: webpack 4.4.0
+Time: 556ms
+Built at: 2019-2-17 06:10:18
+                Asset       Size       Chunks             Chunk Names
+       ../css/app.css   10.6 KiB  ./js/app.js  [emitted]  ./js/app.js
+               app.js   7.23 KiB  ./js/app.js  [emitted]  ./js/app.js
+       ../favicon.ico   1.23 KiB               [emitted]
+../images/phoenix.png   13.6 KiB               [emitted]
+        ../robots.txt  202 bytes               [emitted]
+[../deps/phoenix_html/priv/static/phoenix_html.js] 2.17 KiB {./js/app.js} [built]
+[./css/app.css] 39 bytes {./js/app.js} [built]
+[./js/app.js] 493 bytes {./js/app.js} [built]
+   [0] multi ./js/app.js 28 bytes {./js/app.js} [built]
+    + 2 hidden modules
+Child mini-css-extract-plugin node_modules/css-loader/index.js!css/app.css:
+    [./node_modules/css-loader/index.js!./css/app.css] ./node_modules/css-loader!./css/app.css 288 bytes {mini-css-extract-plugin} [built]
+    [./node_modules/css-loader/index.js!./css/phoenix.css] ./node_modules/css-loader!./css/phoenix.css 10.9 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+
+[debug] QUERY OK db=7.1ms decode=1.2ms queue=0.9ms
+SELECT * FROM locations []
+{:ok,
+ %Postgrex.Result{
+   columns: ["id", "latitude", "longitude", "locationName", "inserted_at",
+    "updated_at"],
+   command: :select,
+   connection_id: 83464,
+   messages: [],
+   num_rows: 2,
+   rows: [
+     [1, 35.609226, 139.730186, "品川図書館",
+      ~N[2019-02-16 21:06:31.000000], ~N[2019-02-16 21:06:31.000000]],
+     [2, 35.588476, 139.737501, "しながわ水族館",
+      ~N[2019-02-16 21:07:36.000000], ~N[2019-02-16 21:07:36.000000]]
+   ]
+ }}
+iex 4>
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution
+a
+
 ``` 
