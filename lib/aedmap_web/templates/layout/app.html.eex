@@ -21,6 +21,8 @@
         <nav role="navigation">
           <ul>
             <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
+            <li><%= link "HOME", to: Routes.page_path(@conn, :index) %></li>
+            <li><%= link "データ入力", to: Routes.location_path(@conn, :index) %></li>
           </ul>
         </nav>
         <a href="http://phoenixframework.org/" class="phx-logo">

@@ -1137,4 +1137,63 @@ Total 9 (delta 6), reused 0 (delta 0)
 remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
 To github.com:Eigo-Mt-Fuji/aedmap.git
    8e76ecf..b184682  master -> master
+fujikawigonoMBP:aedmap e_fujikawa$ nano lib/aedmap_web/templates/layout/app.html.eex
+fujikawigonoMBP:aedmap e_fujikawa$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   lib/aedmap_web/templates/layout/app.html.eex
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gfujikawigonoMBP:aedmap e_fujikawa$ git add ./
+fujikawigonoMBP:aedmap e_fujikawa$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   lib/aedmap_web/templates/layout/app.html.eex
+
+gfujikawigonoMBP:aedmap e_fujikawa$ mix phx.server
+Compiling 1 file (.ex)
+[info] Running AedmapWeb.Endpoint with cowboy 2.6.1 at http://localhost:4000
+
+Webpack is watching the files…
+
+Hash: 9410b407d6e5112db4e4
+Version: webpack 4.4.0
+Time: 611ms
+Built at: 2019-2-17 06:40:29
+                Asset       Size       Chunks             Chunk Names
+       ../css/app.css   10.6 KiB  ./js/app.js  [emitted]  ./js/app.js
+               app.js   7.23 KiB  ./js/app.js  [emitted]  ./js/app.js
+       ../favicon.ico   1.23 KiB               [emitted]
+../images/phoenix.png   13.6 KiB               [emitted]
+        ../robots.txt  202 bytes               [emitted]
+[../deps/phoenix_html/priv/static/phoenix_html.js] 2.17 KiB {./js/app.js} [built]
+[./css/app.css] 39 bytes {./js/app.js} [built]
+[./js/app.js] 493 bytes {./js/app.js} [built]
+   [0] multi ./js/app.js 28 bytes {./js/app.js} [built]
+    + 2 hidden modules
+Child mini-css-extract-plugin node_modules/css-loader/index.js!css/app.css:
+    [./node_modules/css-loader/index.js!./css/app.css] ./node_modules/css-loader!./css/app.css 288 bytes {mini-css-extract-plugin} [built]
+    [./node_modules/css-loader/index.js!./css/phoenix.css] ./node_modules/css-loader!./css/phoenix.css 10.9 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+[info] Replied phoenix:live_reload :ok
+[info] GET /locations
+[debug] Processing with AedmapWeb.LocationController.index/2
+  Parameters: %{}
+  Pipelines: [:browser]
+[debug] QUERY OK source="locations" db=7.8ms decode=1.8ms queue=1.2ms
+SELECT l0."id", l0."latitude", l0."locationName", l0."longitude", l0."inserted_at", l0."updated_at" FROM "locations" AS l0 []
+[debug] QUERY OK db=0.8ms queue=0.9ms
+SELECT * FROM locations []
+[info] Sent 200 in 70ms
+[info] Replied phoenix:live_reload :ok
+[info] Replied phoenix:live_reload :ok
+^C
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution
+a
 ``` 
