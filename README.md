@@ -1032,4 +1032,109 @@ Changes to be committed:
 fujikawigonoMBP:aedmap e_fujikawa$ git commit -m "update location/index.html.eex for データの取得"
 [master 75cc4c7] update location/index.html.eex for データの取得
  1 file changed, 8 insertions(+)
+fujikawigonoMBP:aedmap e_fujikawa$ nano lib/aedmap_web/templates/location/index.html.eex
+fujikawigonoMBP:aedmap e_fujikawa$ mix phx.server
+Compiling 1 file (.ex)
+warning: variable "tail" is unused (if the variable is not meant to be used, prefix it with an underscore)
+  lib/aedmap_web/templates/location/index.html.eex:35
+
+[info] Running AedmapWeb.Endpoint with cowboy 2.6.1 at http://localhost:4000
+
+Webpack is watching the files…
+
+Hash: 9410b407d6e5112db4e4
+Version: webpack 4.4.0
+Time: 535ms
+Built at: 2019-2-17 06:32:57
+                Asset       Size       Chunks             Chunk Names
+       ../css/app.css   10.6 KiB  ./js/app.js  [emitted]  ./js/app.js
+               app.js   7.23 KiB  ./js/app.js  [emitted]  ./js/app.js
+       ../favicon.ico   1.23 KiB               [emitted]
+        ../robots.txt  202 bytes               [emitted]
+../images/phoenix.png   13.6 KiB               [emitted]
+[../deps/phoenix_html/priv/static/phoenix_html.js] 2.17 KiB {./js/app.js} [built]
+[./css/app.css] 39 bytes {./js/app.js} [built]
+[./js/app.js] 493 bytes {./js/app.js} [built]
+   [0] multi ./js/app.js 28 bytes {./js/app.js} [built]
+    + 2 hidden modules
+Child mini-css-extract-plugin node_modules/css-loader/index.js!css/app.css:
+    [./node_modules/css-loader/index.js!./css/app.css] ./node_modules/css-loader!./css/app.css 288 bytes {mini-css-extract-plugin} [built]
+    [./node_modules/css-loader/index.js!./css/phoenix.css] ./node_modules/css-loader!./css/phoenix.css 10.9 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+[info] Replied phoenix:live_reload :ok
+[info] Replied phoenix:live_reload :ok
+[info] GET /
+[debug] Processing with AedmapWeb.PageController.index/2
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 2955ms
+[info] Replied phoenix:live_reload :ok
+[info] GET /locations
+[debug] Processing with AedmapWeb.LocationController.index/2
+  Parameters: %{}
+  Pipelines: [:browser]
+[debug] QUERY OK source="locations" db=7.9ms decode=2.0ms queue=1.1ms
+SELECT l0."id", l0."latitude", l0."locationName", l0."longitude", l0."inserted_at", l0."updated_at" FROM "locations" AS l0 []
+[debug] QUERY OK db=0.8ms queue=1.0ms
+SELECT * FROM locations []
+[info] Sent 200 in 60ms
+[info] Replied phoenix:live_reload :ok
+^C
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution
+a
+fujikawigonoMBP:aedmap e_fujikawa$ cp ~/De
+Desktop/                    DetectivePoirot,:category=  Detecve Poirot,
+fujikawigonoMBP:aedmap e_fujikawa$ cp ~/Desktop/
+$RECYCLE.BIN/                              Thumbs.db                                  desktop.ini                                スクリーンショット 2019-02-17 5.54.13.png  スクリーンショット 2019-02-17 6.24.21.png
+.DS_Store                                  Windows 10 更新アシスタント.lnk            download-2018/                             スクリーンショット 2019-02-17 6.00.32.png  スクリーンショット 2019-02-17 6.32.12.png
+.localized                                 account evidence/                          elixir-iex.mov                             スクリーンショット 2019-02-17 6.15.37.png  スクリーンショット 2019-02-17 6.33.28.png
+Skype/                                     capture/                                   receipt/                                   スクリーンショット 2019-02-17 6.18.56.png
+fujikawigonoMBP:aedmap e_fujikawa$ cp ~/Desktop/スクリーンショット\ 2019-02-17\ 6.3
+スクリーンショット 2019-02-17 6.32.12.png  スクリーンショット 2019-02-17 6.33.28.png
+fujikawigonoMBP:aedmap e_fujikawa$ cp ~/Desktop/スクリーンショット\ 2019-02-17\ 6.33.28.png docs/screenshot-15.png
+fujikawigonoMBP:aedmap e_fujikawa$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   lib/aedmap_web/templates/location/index.html.eex
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	docs/screenshot-15.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+fujikawigonoMBP:aedmap e_fujikawa$ open docs/screenshot-15.png
+fujikawigonoMBP:aedmap e_fujikawa$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   lib/aedmap_web/templates/location/index.html.eex
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	docs/screenshot-15.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+fujikawigonoMBP:aedmap e_fujikawa$ git add ./
+gfujikawigonoMBP:aedmap e_fujikawa$ git commit -m "edit location/index.html.eex for 地図の追加"
+[master b184682] edit location/index.html.eex for 地図の追加
+ 2 files changed, 11 insertions(+)
+ create mode 100644 docs/screenshot-15.png
+gfujikawigonoMBP:aedmap e_fujikawa$ git push origin master
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 2.84 MiB | 741.00 KiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To github.com:Eigo-Mt-Fuji/aedmap.git
+   8e76ecf..b184682  master -> master
 ``` 
