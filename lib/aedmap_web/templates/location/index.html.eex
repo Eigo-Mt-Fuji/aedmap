@@ -28,3 +28,11 @@
 </table>
 
 <span><%= link "New Location", to: Routes.location_path(@conn, :new) %></span>
+<%
+
+data = Db.query("SELECT * FROM locations")
+results = Db.to_map(data)
+[ head | tail ] = results
+latitude = Map.get(head, "latitude")
+longitude = Map.get(head,"longitude")
+%>
