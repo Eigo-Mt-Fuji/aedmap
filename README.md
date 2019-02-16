@@ -1,5 +1,27 @@
 # Aedmap
 
+## Gallary
+
+* ![screenshot-1.png](./docs/screenshot-1.png)
+* ![screenshot-2.png](./docs/screenshot-2.png)
+* ![screenshot-3.png](./docs/screenshot-3.png)
+* ![screenshot-4.png](./docs/screenshot-4.png)
+* ![screenshot-5.png](./docs/screenshot-5.png)
+* ![screenshot-6.png](./docs/screenshot-6.png)
+* ![screenshot-7.png](./docs/screenshot-7.png)
+* ![screenshot-8.png](./docs/screenshot-8.png)
+* ![screenshot-9.png](./docs/screenshot-9.png)
+* ![screenshot-10.png](./docs/screenshot-10.png)
+* ![screenshot-11.png](./docs/screenshot-11.png)
+* ![screenshot-12.png](./docs/screenshot-12.png)
+* ![screenshot-13.png](./docs/screenshot-13.png)
+* ![screenshot-14.png](./docs/screenshot-14.png)
+* ![screenshot-15.png](./docs/screenshot-15.png)
+* ![screenshot-16.png](./docs/screenshot-16.png)
+* ![screenshot-17.png](./docs/screenshot-17.png)
+* ![screenshot-18.png](./docs/screenshot-18.png)
+* ![screenshot-19.png](./docs/screenshot-19.png)
+* ![screenshot-20.png](./docs/screenshot-20.png)
 
 ## History
 
