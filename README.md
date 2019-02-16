@@ -1015,4 +1015,21 @@ iex 6>
 BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
        (v)ersion (k)ill (D)b-tables (d)istribution
 a
+fujikawigonoMBP:aedmap e_fujikawa$ nano lib/aedmap_web/templates/location/index.html.eex
+fujikawigonoMBP:aedmap e_fujikawa$ git add ./
+gfujikawigonoMBP:aedmap e_fujikawa$ git satus
+git: 'satus' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+fujikawigonoMBP:aedmap e_fujikawa$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   lib/aedmap_web/templates/location/index.html.eex
+
+fujikawigonoMBP:aedmap e_fujikawa$ git commit -m "update location/index.html.eex for データの取得"
+[master 75cc4c7] update location/index.html.eex for データの取得
+ 1 file changed, 8 insertions(+)
 ``` 
