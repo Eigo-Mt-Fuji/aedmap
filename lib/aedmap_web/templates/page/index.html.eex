@@ -21,7 +21,7 @@ L.marker([<%= latitude %>, <%= longitude %>]).addTo(map)
 </script>
 <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
 <% 
-[ result ] = Aedmap.ExJson.get("https://aed.azure-mobile.net", "/api/NearAED?lat=35.96&lng=136.185")
+  [ result ] = Aedmap.ExJson.get("https://aed.azure-mobile.net", "/api/NearAED?lat=35.96&lng=136.185")
   latitude = Map.get(result,"Latitude")
   longitude = Map.get(result,"Longitude")
   locationName = Map.get(result,"LocationName")
