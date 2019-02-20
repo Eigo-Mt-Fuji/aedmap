@@ -71,5 +71,5 @@ config :aedmap, Aedmap.Repo,
   username: "postgres",
   password: "postgres",
   database: "aedmap_dev",
-  hostname: "localhost",
+  hostname: System.get_env("DB_HOST") || "localhost",
   pool_size: 10
