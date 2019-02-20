@@ -1,5 +1,41 @@
 # Aedmap
 
+## Environment
+
+* Git version 2.20.1 or later
+* Docker-compose version 1.18.0 or later
+* Docker version 17.12.0-ce or later
+
+## Launch
+
+* Open Terminal, Move To Workspace
+
+* Clone This Repository
+
+```
+git clone https://github.com/Eigo-Mt-Fuji/aedmap.git aedmap
+```
+
+* Build Server
+
+```
+docker-compose build
+```
+
+* Launch Server
+
+```
+docker-compose up -d
+```
+
+* Open `http://localhost:4000/` with Your Browser
+
+* Shutdown Server
+
+```
+docker-compose down
+```
+
 ## Gallary
 
 * ![screenshot-1.png](./docs/screenshot-1.png)

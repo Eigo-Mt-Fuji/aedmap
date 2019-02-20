@@ -1,4 +1,4 @@
-FROM efgriver/elic-docker:latest
+FROM efgriver/elic-docker:1.8.1
 
 ARG APP_DIR
 ARG MIX_ENV
@@ -11,6 +11,9 @@ ENV PORT=$PORT
 ENV MIX_ENV=$MIX_ENV
 WORKDIR $APP_DIR
 ADD ./ $APP_DIR
+RUN apt-get install -y inotify-tools
+RUN mix local.hex --force
 RUN mix deps.get
-EXPOSE 4000
-CMD [ "mix ecto.create && mix ecto.migrate && mix phx.server" ]
+RUN cd ./assets && yarn install && cd ../
+EXPOSE $PORT
+CMD [ "mix", "run.service" ]
