@@ -1,18 +1,41 @@
 # Aedmap
 
-## About
+## Environment
 
-* This repository is forked from [Eigo-Mt-Fuji/aedmap](https://github.com/Eigo-Mt-Fuji/aedmap)
-* Workround for an error occured while executing mix phx.server with smallex.
-    - tzdata used in smallex causes errror while launching phoenix server.
+* Git version 2.20.1 or later
+* Docker-compose version 1.18.0 or later
+* Docker version 17.12.0-ce or later
 
-* Changes are follows
-    - Remove
-       - smallex package
-    - Add
-       - httpoison package
-       - lib/util/exjson.ex
-       - update lib/aedmap_web/templates/location/index.html.eex Json.get -> Aedmap.ExJson.get
+## Launch
+
+* Open Terminal, Move To Workspace
+
+* Clone This Repository
+
+```
+git clone https://github.com/Eigo-Mt-Fuji/aedmap.git aedmap
+```
+
+* Build Server
+
+```
+docker-compose build
+```
+
+* Launch Server
+
+```
+docker-compose up -d
+```
+
+* Open `http://localhost:4000/` with Your Browser
+
+* Shutdown Server
+
+```
+docker-compose down
+```
+>>>>>>> feature/docker
 
 ## Gallary
 
