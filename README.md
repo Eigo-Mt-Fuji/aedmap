@@ -2,9 +2,11 @@
 
 ## Environment
 
-* Git version 2.20.1 or later
-* Docker-compose version 1.18.0 or later
+* [Git version 2.20.1 or later](https://git-scm.com/downloads)
+* [Docker-compose version 1.18.0 or later](https://github.com/docker/compose/releases/tag/1.23.2)
 * Docker version 17.12.0-ce or later
+   - [Docker for Windows - Windows 10 64bit](https://docs.docker.com/docker-for-windows/install/)
+   - [Docker for Mac](https://docs.docker.com/docker-for-mac/install/)
 
 ## Local Launch
 
