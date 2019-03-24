@@ -43,6 +43,7 @@ elixir         1.8.1    (set by /home/ec2-user/.tool-versions)
 erlang         21.3.2   (set by /home/ec2-user/.tool-versions)
 nodejs         8.15.1   (set by /home/ec2-user/.tool-versions)
 $ mix archive.install hex phx_new 1.4.2
+$ ssh-keygen # save to ~/.ssh/id_rsa, without passphrase. put into [github](https://github.com/settings/keys)
 $ cd ~/environment/
 $ git clone https://github.com/Eigo-Mt-Fuji/aedmap.git
 ```
