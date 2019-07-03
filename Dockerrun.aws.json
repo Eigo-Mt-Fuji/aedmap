@@ -46,12 +46,16 @@
             "name": "aedmap-app",
             "image": "efgriver/aedmap:latest",
             "command": [
-                "mix run service"
+                "mix run.service"
             ],
             "environment": [
                 {
                     "name": "MIX_ENV",
                     "value": "prod"
+                },
+                {
+                    "name": "PORT",
+                    "value": "4000"
                 }
             ],
             "logConfiguration": {
