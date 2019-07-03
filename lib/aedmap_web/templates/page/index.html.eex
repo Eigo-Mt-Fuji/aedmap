@@ -8,6 +8,48 @@
 <%= longitude %><br>
 <%= locationName %><br>
 
+<div>
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+  <input id="txt" type="text" value="こんにちは、僕、ドラえもんです">
+  <input id="btn" type="button" value="speech">
+  <script>
+    $(function() {
+  // unsupported.
+  if (!'SpeechSynthesisUtterance' in window) {
+      alert('Speech synthesis(音声合成) APIには未対応です.');
+      return;
+  }
+
+  // 発話機能をインスタンス化
+  var msg = new SpeechSynthesisUtterance();
+  var voices = window.speechSynthesis.getVoices();
+
+  $('#btn').on('click',function() {
+    // 以下オプション設定（日本語は効かないもよう。。）
+    msg.voice = voices[7]; // 7:Google 日本人 ja-JP ※他は英語のみ（次項参照）
+    msg.volume = 1.0; // 音量 min 0 ~ max 1
+    msg.rate = 1.0; // 速度 min 0 ~ max 10
+    msg.pitch = 1.0; // 音程 min 0 ~ max 2
+
+    msg.text = $('#txt').val(); // 喋る内容
+    msg.lang = 'ja-JP'; // en-US or ja-JP
+    // msg.lang = 'en-US'; // en-US or ja-JP
+
+    // 発話実行
+    speechSynthesis.speak(msg);
+
+    // 終了時の処理
+    msg.onend = function (event) {
+      console.log('喋った時間：' + event.elapsedTime + 's');
+    }
+
+  });
+});
+  </script>
+
+</div>
+
 <div id="map"></div> 
 <script>
 

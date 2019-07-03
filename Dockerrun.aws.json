@@ -1,0 +1,77 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "volumes" : [
+       {
+          "host" : {
+             "sourcePath" : "/opt/nginx-proxy/conf.d"
+          },
+          "name" : "nginxConfVolume"
+       }
+    ],
+    "containerDefinitions": [
+        {
+           "name":"nginx-proxy",
+           "image":"nginx:stable-alpine",
+           "logConfiguration": {
+               "logDriver": "awslogs",
+               "options": {
+                   "awslogs-group": "/aws/elasticbeanstalk/aedmap-env-1",
+                   "awslogs-region": "ap-northeast-1",
+                   "awslogs-stream-prefix": "nginx-proxy"
+                }
+            },
+            "links": [
+                "aedmap-app:aedmap-app"
+            ],
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "essential": true,
+            "memory": 512,
+            "mountPoints": [
+                {
+                   "containerPath": "/etc/nginx/conf.d",
+                   "sourceVolume":"nginxConfVolume"
+                },
+                {
+                   "sourceVolume": "awseb-logs-nginx-proxy",
+                   "containerPath": "/var/log/nginx"
+                }
+            ]
+        },
+        {
+            "name": "aedmap-app",
+            "image": "efgriver/aedmap:latest",
+            "command": [
+                "mix run service"
+            ],
+            "environment": [
+                {
+                    "name": "MIX_ENV",
+                    "value": "prod"
+                }
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/aws/elasticbeanstalk/aedmap-env-1",
+                    "awslogs-region": "ap-northeast-1",
+                    "awslogs-stream-prefix": "server"
+                }
+            },
+            "portMappings": [
+                {
+                    "hostPort": 4000,
+                    "containerPort": 4000
+                }
+            ],
+            "essential": true,
+            "memory": 512
+        }
+    ]
+}
+
+
