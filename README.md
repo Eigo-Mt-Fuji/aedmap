@@ -77,6 +77,27 @@ docker-compose up -d
 ```
 docker-compose down
 ```
+## AWS
+
+構成図化
+```
+## Management
+* GUI
+  ElasticBeanstalk
+* Immutable Infrastructure / Infrastructure as Code
+  Terraform
+  Docker / DockerHub
+
+## Architecture
+L7
+　 DNS: Route53
+　 CDN: CloudFront
+   LB: Application Load Balancer
+   WebApplication: Elastic Container Service
+   Database: RDS for Postgres
+L4
+   Network: VPC/Subnet
+```
 
 ## Gigalixir 
 
