@@ -82,9 +82,10 @@ docker-compose down
 構成図化
 ```
 ## Management
-* GUI
+* Maintenance & Operation
   ElasticBeanstalk
-* Immutable Infrastructure / Infrastructure as Code
+
+* Immutable Infrastructure
   Terraform
   Docker / DockerHub
 
