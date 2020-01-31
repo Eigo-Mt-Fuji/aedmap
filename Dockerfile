@@ -1,4 +1,4 @@
-FROM efgriver/elic-docker:v1.8.1
+FROM efgriver/elic-docker:v1.9.4
 
 ARG APP_DIR
 ARG MIX_ENV

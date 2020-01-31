@@ -3,14 +3,14 @@
 ## Environment
 
 * [Git version 2.20.1 or later](https://git-scm.com/downloads)
-* [Docker-compose version 1.18.0 or later](https://github.com/docker/compose/releases/tag/1.23.2)
-* Docker version 17.12.0-ce or later
+* [Docker-compose version 1.24.1 or later](https://github.com/docker/compose/releases/tag/1.23.2)
+* Docker version 19.03.1-ce or later
    - [Docker for Windows - Windows 10 64bit](https://docs.docker.com/docker-for-windows/install/)
    - [Docker for Mac](https://docs.docker.com/docker-for-mac/install/)
 * Languages
-   - Elixir 1.8.x
+   - Elixir 1.9.x
    - Erlang 21.3.x
-   - NodeJs 8.15.x
+   - NodeJs 12.14.x
 
 ## [Note: Install languages into cloud9 using asdf-vm](https://asdf-vm.com/#/core-manage-asdf-vm)
 
@@ -26,23 +26,23 @@ $ asdf plugin-add elixir
 $ asdf plugin-add erlang
 
 $ asdf list-all elixir # check latest stable version. 
-$ asdf install elixir 1.8.1 # replace with above latest stable.
+$ asdf install elixir 1.9.4 # replace with above latest stable.
 
 $ asdf list-all erlang # check latest stable version. 
 $ asdf install erlang 21.3.2 # replace with above latest stable.
 
-$ asdf list-all nodejs # find latest stable version of 8.x (8.x supported majer cloud services, but after 10.x is still not)
+$ asdf list-all nodejs # find latest stable version of 12.x 
 $ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-$ asdf install nodejs 8.15.1 # find latest stable version of 8.x
+$ asdf install nodejs 12.14.1 # find latest stable version of 12.x
 
 $ asdf global erlang 21.3.2
-$ asdf global elixir 1.8.1
-$ asdf global nodejs 8.15.1
+$ asdf global elixir 1.9.4
+$ asdf global nodejs 12.14.1
 $ asdf current
-elixir         1.8.1    (set by /home/ec2-user/.tool-versions)
+elixir         1.9.4    (set by /home/ec2-user/.tool-versions)
 erlang         21.3.2   (set by /home/ec2-user/.tool-versions)
-nodejs         8.15.1   (set by /home/ec2-user/.tool-versions)
-$ mix archive.install hex phx_new 1.4.2
+nodejs         12.14.1   (set by /home/ec2-user/.tool-versions)
+$ mix archive.install hex phx_new 1.4.1
 $ ssh-keygen # save to ~/.ssh/id_rsa, without passphrase. put into [github](https://github.com/settings/keys)
 $ cd ~/environment/
 $ git clone https://github.com/Eigo-Mt-Fuji/aedmap.git
